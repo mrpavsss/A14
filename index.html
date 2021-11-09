@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Understanding Cookies</title>
+    <script type = "text/javascript">
+
+        function WriteCookie()
+        {
+            if( document.myform.customer.value == "" ) {
+                alert("Enter some value!");
+                return;
+            }
+            cookievalue = escape(document.myform.customer.value) + ";";
+            document.cookie="name=" + cookievalue;
+            document.write ("Setting Cookies : " + "name=" + cookievalue );
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+<form name = "myform" action = "">
+    Enter name: <input type = "text" name = "customer"/>
+    <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
+</form>
+<p></p>
+<footer>
+    <p>&copy; Pavly Rizk, 11/16/2021</p>
+</footer>
+</body>
+</html>
